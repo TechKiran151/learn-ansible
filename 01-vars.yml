@@ -25,3 +25,15 @@
         msg: "{{ URL2 }}"
       vars:
         URL2: kiran.com
+
+#How to execute shell command in ansible
+#command is uptime
+- name: register Variable Example
+  hosts: localhost
+  tasks:
+    - name: get Uptime of server
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print OUT var
+      ansible.builtin.debug:
+        msg: "{{ OUT }}"
