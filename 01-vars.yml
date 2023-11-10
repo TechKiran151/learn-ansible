@@ -11,7 +11,7 @@
 
 - name: Demo on Task Variables
   hosts: localhost
-  Vars:
+  vars:
     URL1: sample.com
     URL2: sample.com
   tasks:
