@@ -14,7 +14,7 @@
   tasks:
     - name: Print URL1 variable
       ansible.builtin.debug:
-        msg: "{{ URL2 }}"
+        msg: "{{ URL1 }}"
       vars:
         URL1: kiran.com
     - name: Print URL2 variable
