@@ -1,8 +1,24 @@
 - name: Demo on Variables
   hosts: localhost
-  vars:
-    URL: kiran.com
+  vars: #vaiable
+    URL: kiran.com  #intialize the kiran.com in URL variable
   tasks:
     - name: Print URL variable
-      ansible.builtin.debug:
+      ansible.builtin.debug: #it's used to print the variable
         msg: "{{ URL }}"
+
+#Value starts a variable, like msg:{{ URL }} then quotes are needed, if it does not start with variable like msg: Hello {{ URL }}, then quotes are npt needed.
+
+- name: Demo on Task Variables
+  hosts: localhost
+  tasks:
+    - name: Print URL1 variable
+      ansible.built.debug:
+        msg: "{{ URL2 }}"
+      vars:
+        URL1: kiran.com
+    - name: Print URL2 variable
+      ansible.built.debug:
+        msg: "{{ URL2 }}"
+      vars:
+        URL2: kiran.com
