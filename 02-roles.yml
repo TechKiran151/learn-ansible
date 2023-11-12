@@ -1,0 +1,4 @@
+- name: Demo on Roles
+  hosts: localhost
+  roles:
+    - demo  #role name is demo like inside rolse directory we are created demo which called as demo role
