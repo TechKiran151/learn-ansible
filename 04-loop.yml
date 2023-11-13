@@ -1,0 +1,24 @@
+# loop is used to run the same task again and again using different inputs
+- name: demo on Loops
+  hosts: localhost
+  tasks:
+    - name: Loop
+      ansible.builtin.debug:
+        msg: fruit - {{ item }} # item is bydeafult variable in ansible
+      loop:
+        - apple
+        - orange
+        - banana
+
+- name: Demo on loop
+  hosts: localhost
+  vars:
+    fruites:
+      - apple
+      - banana
+      - orange
+  tasks:
+    - name: Loop
+      ansible.builtin.debug:
+        msg: fruit - {{ item }}
+      loop: "{{fruites}}"
