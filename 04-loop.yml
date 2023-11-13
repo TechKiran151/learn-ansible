@@ -20,5 +20,5 @@
   tasks:
     - name: Loop
       ansible.builtin.debug:
-        msg: fruit - {{ item }}
+        msg: fruit - {{ fruites }}
       loop: "{{fruites}}"
