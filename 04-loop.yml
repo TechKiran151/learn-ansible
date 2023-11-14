@@ -23,6 +23,7 @@
         msg: fruit - {{ item }}
       loop: "{{fruites}}"
 
+
 #How to use map in the ansible
 - name: Demo on loops -map
   hosts: localhost
@@ -34,8 +35,8 @@
   tasks:
     - name: Loop
       ansible.builtin.debug:
-        msg: fruit name - {{ item.name }}, quantity - {{ item.quantity }}
+        msg: fruit name - {{ item.name }}, quantity - {{ item.quantity }} #Here we are fetching the map using .name and .quantity
       loop:
-        - { name: "apple", quantity: 100}
-        - {name: "banana", quantity: 200}
-        - {name: "orrange", quantity: 300}
+        - { name: "apple", quantity: 100} # this is map
+        - { name: "banana", quantity: 200} # this is  map
+        - { name: "orrange", quantity: 300} #this is map
