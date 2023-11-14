@@ -4,4 +4,4 @@
   tasks:
     - name: Print Arch
       ansible.builtin.debug:
-        msg: "{{ ansible_architecture }}"
+        msg: "{{ ansible_architecture }}","{{ ansible_bios_version }}"
