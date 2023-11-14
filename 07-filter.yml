@@ -51,3 +51,14 @@
       ansible.builtin.debug:
         msg: "{{ ((OUT.stdout | split (','))[1] | split(' '))[2]}}"
 
+#above code given me output in double quotes mean string value but i wanted to come this as a integer please follow bellow one
+- name: Demo on Filters
+  hosts: localhost
+  tasks:
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print No of users logged in
+      ansible.builtin.debug:
+        msg: "{{ ((OUT.stdout | split (','))[1] | split(' '))[2]}}"
+
