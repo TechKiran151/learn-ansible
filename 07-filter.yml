@@ -9,7 +9,7 @@
         msg: "{{ OUT }}"
 
  #How do we use filter check bellow example :-
-- name: emo on Filters
+- name: Demo on Filters
   hosts: localhost
   tasks:
     - name: Run uptime command
@@ -18,3 +18,15 @@
     - name: Print No of users logged in
       ansible.builtin.debug:
         msg: "{{ OUT.stdout | split (',') }}"
+
+#I want to print the user list by giving index means when we give 0 it display index 0 value and 1 it display the index 1 value.
+- name: Demo on Filters
+  hosts: localhost
+  tasks:
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print No of users logged in
+      ansible.builtin.debug:
+        msg: "{{ (OUT.stdout | split (','))[1] }}"
+
