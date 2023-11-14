@@ -40,4 +40,14 @@
     - name: Print No of users logged in
       ansible.builtin.debug:
         msg: "{{ (OUT.stdout | split (','))[1] | split(' ')}}"
+# continue I want to print only number not use then u can follow bellow one
+- name: Demo on Filters
+  hosts: localhost
+  tasks:
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print No of users logged in
+      ansible.builtin.debug:
+        msg: "{{ ((OUT.stdout | split (','))[1] | split(' '))[2]}}"
 
