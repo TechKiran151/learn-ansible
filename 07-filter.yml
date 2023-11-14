@@ -3,7 +3,18 @@
   tasks:
     - name: Run uptime command
       ansible.builtin.shell: uptime
-      register: OUT
+      register: OUT #store the values in OUT variable
     - name: Print No of Users logged in
       ansible.builtin.debug:
         msg: "{{ OUT }}"
+
+ #How do we use filter check bellow example :-
+- name: emo on Filters
+  hosts: localhost
+  tasks:
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print No of users logged in
+      ansible.builtin.debug:
+        msg: "{{ OUT.stdout | split (',') }}"
