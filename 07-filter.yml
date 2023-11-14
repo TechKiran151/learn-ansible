@@ -1,0 +1,6 @@
+- name: demo on Filters
+  hosts: localhost
+  tasks:
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
