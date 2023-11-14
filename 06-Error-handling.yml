@@ -1,0 +1,9 @@
+- name: Demo on error handling
+  hosts: all
+  tasks:
+    - name: execute ls command
+      ansible.builtin.debug: ls
+
+    - name: print hello
+      ansible.builtin.debug:
+        msg: Hello
