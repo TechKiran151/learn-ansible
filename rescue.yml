@@ -13,7 +13,7 @@
         - name: Never print this
           ansible.builtin.debug:
             msg: 'I never execute, due to above task failing, :-('
-
+#rescue will work with block only even though it is failed we rescued it
       rescue:
         - name: Print when errors
           ansible.builtin.debug:
