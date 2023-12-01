@@ -17,7 +17,7 @@
       vars:
         URL1: kiru
     - name: print var two
-      ansible.built.debug:
+      ansible.builtin.debug:
         msg: " {{ URL2 }}"
       vars:
         URL2: Gowda
