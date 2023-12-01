@@ -1,7 +1,7 @@
 - name: Demo on variable
   hosts: all
   vars:
-    URL= kirangowda
+    URL: kirangowda
   tasks:
     - name: print the variable
       ansible.builtin.debug:
@@ -15,10 +15,9 @@
       ansible.builtin.debug:
         msg: " {{ URL1 }]"
       vars:
-        URL1= kiru
+        URL1: kiru
     - name: print var two
       ansible.built.debug:
         msg: " {{ URL2 }}"
       vars:
-        URL2= Gowda
-      #
+        URL2: Gowda
