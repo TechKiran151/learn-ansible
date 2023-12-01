@@ -1,5 +1,5 @@
 - name: Demo on variable
-  hosts: all
+  hosts: localhost
   vars:
     URL: kirangowda
   tasks:
@@ -9,7 +9,7 @@
 
 #--------
 - name: Declare variable at task level
-  hosts: all
+  hosts: localhost
   tasks:
     - name: print var one
       ansible.builtin.debug:
