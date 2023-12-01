@@ -1,11 +1,11 @@
 - name: Demo on variable
   hosts: all
   vars:
-    var1= kirangowda
+    URL= kirangowda
   tasks:
     - name: print the variable
       ansible.builtin.debug:
-        msg: " {{ var1 }}"
+        msg: " {{ URL }}"
 
 #--------
 - name: Declare variable at task level
@@ -13,12 +13,12 @@
   tasks:
     - name: print var one
       ansible.builtin.debug:
-        msg: " {{ var2 }]"
+        msg: " {{ URL1 }]"
       vars:
-        var2= kiru
+        URL1= kiru
     - name: print var two
       ansible.built.debug:
-        msg: " {{ var3 }}"
+        msg: " {{ URL2 }}"
       vars:
-        var3= Gowda
+        URL2= Gowda
       #
