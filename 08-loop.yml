@@ -8,3 +8,16 @@
         - banana
         - chikku
         - dragan
+
+- name: Demo on loop
+  hosts: localhost
+  vars:
+    Animals:
+      - Cow
+      - Dog
+      - Tiger
+  tasks:
+    - name: demo
+      ansible.builtin.debug:
+        msg: animals - {{ item }}
+      loop: " {{Animals}}"
