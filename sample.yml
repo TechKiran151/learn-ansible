@@ -5,7 +5,7 @@
     LUCK1: kiran.com
   tasks:
     - name: Ping
-      ansible.builtin.ping:
+      ansible.builtin.debug:
         msg: " {{ LUCK }} "
       vars:
         KIRU: abhi.com
