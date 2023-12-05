@@ -1,5 +1,5 @@
 - name: sample
-  hosts: all
+  hosts: localhost
   vars:
     LUCK: kiran.com
     LUCK1: kiran.com
