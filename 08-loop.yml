@@ -20,7 +20,7 @@
     - name: demo
       ansible.builtin.debug:
         msg: animals - {{ item }}
-      loop: " {{Animals}}"
+      loop: "{{Animals}}"
 
 - name: Demo on loops -map
   hosts: localhost
