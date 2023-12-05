@@ -8,9 +8,9 @@
       ansible.builtin.debug:
         msg: " {{ LUCK }} "
       vars:
-        KIRU: abhi.com
+        LUCK: abhi.com
     - name: print
       ansible.builtin.debug:
         msg: " {{ LUCK1 }} "
       vars:
-        KIRU1: abhi.com
+        LUCK1: abhi.com
