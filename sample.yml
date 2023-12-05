@@ -1,5 +1,16 @@
 - name: sample
   hosts: all
+  vars:
+    LUCK: kiran.com
+    LUCK1: kiran.com
   tasks:
     - name: Ping
       ansible.builtin.ping:
+        msg: " {{ LUCK }} "
+      vars:
+        KIRU: abhi.com
+    - name: print
+      ansible.builtin.debug:
+        msg: " {{ LUCK1 }} "
+      vars:
+        KIRU1: abhi.com
