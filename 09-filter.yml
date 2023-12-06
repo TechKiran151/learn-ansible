@@ -1,0 +1,9 @@
+- name: Demo on filter
+  hosts: localhost
+  tasks:
+    - name: demo on filter
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: demo
+      ansible.builtin.debug:
+        msg: "{{OUT}}"
